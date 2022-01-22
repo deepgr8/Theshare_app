@@ -187,7 +187,7 @@ body,
 @media only screen and (max-width: 700px) {
   .inputBtn {
       /* display: block; */
-      margin-top: 8.5rem;
+      margin-top: 6.5rem;
 
     margin-left: 0rem;
   }
@@ -219,6 +219,8 @@ body,
     .inputTab {
         margin-left: -4rem;
         margin-bottom: 1rem;
+        position: absolute;
+        margin-top: 4rem;
 
     }
     .inputTab2{
