@@ -7,7 +7,7 @@ from flask_pymongo import PyMongo
 from flask import get_flashed_messages,flash
 import firebase_admin
 from firebase_admin import credentials
-from firebase_admin import credentials, firestore, storage
+from firebase_admin import firestore, storage
 import tempfile
 
 app = Flask(__name__)
