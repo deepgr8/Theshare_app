@@ -347,3 +347,25 @@ body,
   font-family: bold,cursive;
   color: lawngreen;
 }
+
+.nameTab{
+    margin-left: -160px;
+    margin-top: 60px;
+    width: 30vh;
+    flex: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+}
+
+.namee{
+  margin-left: -160px;
+    margin-top: 35px;
+    width: 30vh;
+    flex: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+}
