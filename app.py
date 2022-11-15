@@ -10,8 +10,9 @@ from firebase_admin import credentials
 from firebase_admin import credentials, firestore, storage
 import tempfile
 
-app = Flask(__name__)
+from flask_session import Session
 
+app = Flask(__name__)
 config ={
   "apiKey": "AIzaSyB3uIY86Lu0QOOeS25BAmDED4zOaJyctME",
   "authDomain": "theshare-8389b.firebaseapp.com",
@@ -113,14 +114,14 @@ def uploader():
         f = request.files['fileinput']
         message="Successfully Uploaded"
         global name
-        name=request.form.get('name')
+        name=request.form.get('nameinput')
         
         typee=f.content_type
         print(typee)
         temp = tempfile.NamedTemporaryFile(delete=False)
         f.save(temp.name)
         
-        # firebase.storage().put(temp.name)
+        firebase.storage().put(temp.name)
         with open(temp.name, 'rb') as file:
             content = file.read()
             # print(content)
@@ -178,7 +179,7 @@ def upload():
             
             db.collection('users').add(users_data)
             flash("successfully uploaded",'success')
-        return render_template("dashboard.html")
+        return render_template("index.html")
 
 
 @app.route('/search', methods=['Post'])
